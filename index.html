@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Energía Undimotriz</title>
+
+</head>
+<body>
+    <header class="header">
+        <div class="energia">
+            <h1>Energía Undimotriz</h1>
+            <p>La fuerza del océano transformada en energía limpia</p>
+        </div>
+    </header>
+    <div class="layout-grid">
+        <aside class="sidebar">
+            <h2><img src="img/ico_menu.png" alt="" class="icono">Menú de Navegación</h2>
+            <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Que-es.html">¿Que es?</a></li>
+            <li><a href="Calculadora.html">Calculadora</a></li>
+            <li><a href="Grafico.html">Gráfico</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Contactos.html">Contactos</a></li>
+        </ul>
+        </aside>
+        <main class="portafolio">
+            <section class="item">
+                <h2>Bienvenido</h2>
+            </section>
+            <section class="item">
+                <p style="font-size: 15px;">Explora el poder del océano a través de la energía undimotriz, una fuente renovable con gran potencial.</p>
+            </section>
+            <section class="item">
+                <div class="ventajas" onclick="openModal('modal-ventajas')">
+                <h2>Ventajas</h2>
+             </div>
+            </section>
+            <section class="item">     
+            </section>
+            <section class="item">
+                <h2>¿Que es?</h2>
+                <p>La energía undimotriz, también conocida como energía de las olas, es una forma de energía marina que convierte la energía mecánica generada por el movimiento de las olas en energía eléctrica. </p>
+                <a href="Leer-mas.html">Saber más ---> </a>
+            
+            </section>
+            <section class="item">
+                <h2>Funcionamiento</h2>
+                <p>El funcionamiento se basa en convertir la energía mecánica de las olas en electricidad, por medio de diferentes disposivos electromecánicos</p>
+                <a href="Leer-mas.html">Saber más ---> </a>
+            </section>
+            <section class="item">
+                <h2>Calculadora undimotriz</h2>
+                <p>Es una herramienta para estimar la energía que se puede obtener de las olas.
+                  Se le pide al usuario la altura de la ola (H) y el periodo de la ola (T) en segundos.
+                </p>
+                <a href="Calculadora.html">Saber más ---></a>
+            </section>
+            <section class="item">
+                <h2>Grafica</h2>
+                <p>La energía undimotriz, también conocida como energía de las olas, es la energía mecánica que se obtiene del movimiento de las olas del mar.</p>
+                <a href="Grafico.html">Saber más ---></a>
+            </section>
+        </main> 
+    </div>
+    
+      <div id="modal-ventajas" class="modal">
+        <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-ventajas')">&times;</span>
+        <h2>Ventajas de la Energía Undimotriz</h2>
+        <div class="ventaja">
+      <h3>1. Fuente renovable y sostenible</h3>
+      <p>Se basa en el movimiento continuo de las olas del mar, un recurso natural que no se agota.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>2. Bajas emisiones</h3>
+      <p>No produce gases contaminantes ni contribuye al cambio climático durante su funcionamiento.</p>
+    </div>
+    <div class="ventaja">
+      <h3>3. Previsibilidad</h3>
+      <p>Las olas son más fáciles de predecir que el viento o la radiación solar, lo que mejora la planificación energética.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>4. Alta densidad energética</h3>
+      <p>Las olas tienen más energía por metro cuadrado comparado con el viento o la luz solar.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>5. Gran potencial en zonas costeras</h3>
+      <p>Muchas regiones del mundo tienen acceso a costas que pueden aprovechar esta tecnología.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>6. Aprovecha espacio marino</h3>
+      <p>Se instala en el mar, por lo que no compite con el uso del suelo en tierra firme.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>7. Generación continua</h3>
+      <p>Las olas están presentes día y noche, lo que permite una producción energética más constante.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>8. Complementaria con otras energías renovables</h3>
+      <p>Puede combinarse con energía solar o eólica para asegurar un suministro más estable.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>9. Reducción de dependencia energética</h3>
+      <p>Ayuda a los países costeros a generar su propia energía y depender menos de combustibles fósiles o importaciones.</p>
+    </div>
+
+    <div class="ventaja">
+      <h3>10. Impacto visual menor</h3>
+      <p>Si se instala lejos de la costa, tiene un impacto visual mucho menor que turbinas eólicas o paneles solares.</p>
+    </div>
+    </div>
+    </div>
+    <footer class="footer">
+    <p>&copy; Juan Sebastian Salgado Naranjo | Claudia Nataly Orozco Ocampo
+                        <br> Marcela Urrutia Urango | Davinson Andrey Mona Arias <br> Bootcamp Programación - 2025👌</p>
+</footer>
+ <script>
+        function openModal(modalId){
+            document.getElementById(modalId).style.display = 'flex';
+        }
+        function closeModal(modalId){
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>

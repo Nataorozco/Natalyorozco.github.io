@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta sobre Consumos Energéticos</title>
+    <link rel="stylesheet" href="css/style-contacto.css">
+
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+      <nav class="navbar">
+        <ul>
+        <li><a href="index.html">Inicio</a></li>
+            <li><a href="Que-es.html">¿Que es?</a></li>
+            <li><a href="Calculadora.html">Calculadora</a></li>
+            <li><a href="Grafico.html">Gráfico</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Contactos.html">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="form-container">
+    <!-- Formulario -->
+     <div class="item">
+    <form action="https://formspree.io/f/xrbqypya" method="POST">
+        <!-- Archivo a enviar -->
+        <fieldset>
+            <!-- legenda o nombre del cuadro del formulario -->
+            <legend>Información Personal</legend>
+            <!-- Etiqueta -->
+            <!-- cuadro de texto -->
+            <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+            <!-- Etiqueta -->
+             <!-- Cuadro de texto para correo -->
+             <input type="email" id="email" name="responder_a" required placeholder="Ingresa tu correo electrónico">
+
+             <!-- Cuadro de texto para ubiación -->
+             <input type="text" id="localizacion" name="localizacion" required placeholder="Ingresa tu ubicación">
+
+        </fieldset>
+        </div>
+        <div class="item">
+        <fieldset>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+        </fieldset>
+        <button type="submit"> Enviar</button>
+<!-- Marco del archivo enviar -->
+        <!-- Etiqueta -->
+
+        </form>
+        </main>
+        </div> 
+</body>
+</html>
+
+
+
+
