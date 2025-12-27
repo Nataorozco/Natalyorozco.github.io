@@ -1,6 +1,6 @@
 # Proyecto Web Básica
 
-Proyecto académico personal desarrollado en HTML, CSS y JavaScript como parte de mi formación en Análisis y Desarrollo de Software (ADSO) – SENA.
+Proyecto académico personal desarrollado en HTML, CSS y JavaScript como parte de mi formación en Análisis y Desarrollo de Software Talento Tech – Colombia.
 
 ## Páginas del proyecto
 - `index.html`: Página principal
