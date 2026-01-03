@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: url(../img/ola1.png);
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+}
+
+/*---- ---------Estilos Navbar-------- --------*/
+.navbar{
+    background: hsla(0, 0%, 100%, 0);
+    box-shadow: 0 8px 20px rgb(0, 0, 0); 
+    padding: 40px;
+    /* fijar el menú */
+    position: sticky;
+    /* quitarle el espaciado en la parte superior */
+    top: 0;
+    margin-bottom: 80px;
+    /* para la creación de capas */
+    z-index: 1000;
+}
+
+.navbar ul{
+    /* disposición flexible */
+    display: flex;
+    /* no tenga estilos la lista */
+    list-style-type: none;
+    /* espaciado dentro del contenedor hacia la izquierda */
+    padding-left: 0;
+    /* espacioado que hay despues del borde del contenido */
+    margin: 0;
+    /* Se justifica el contenido de acuerdo al espacio del evento */
+    justify-content:space-around
+}
+
+.navbar ul li{
+    /* espaciado que hay desde la parte exterior y el borde, en donde el primer termino es el espacio de arriba y abajo y el segundo termino es la izquierda y derecha */
+    margin: 0 15px;
+}
+
+.navbar ul li a{
+    font-weight: 600;
+    /* sin decoraciones  */
+    text-decoration: none;
+    /* color del texto */
+    color: white;
+    /* temporizando la transición de cambio de 0.3s */
+    transition: color 0.3s;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.773);
+}
+
+.navbar ul li a:hover{
+    /* cambia el color cuando se pasa el cursor */
+    color: #006c9e;
+}
+
+/* Contenido de la calculadora Undimotriz */
+h2 {
+    color: #ffffff;
+}
+
+#altura, #periodo{
+    /* margen dentro del borde */
+    padding: 10px;
+    /* ancho */
+    width: 50%;
+}
+
+label {
+    color: #ffffff;
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    margin-top: 10px;
+    padding: 5px;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.702);
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005999;
+}
+
+#Resultado {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.container{
+    /* ancho de la calculadora */
+    width: 350px;
+    /* largo de la calculadora */
+    height: 315px;
+    /* Color de fondo de la calculadora */
+    background: hsla(0, 0%, 0%, 0);
+    /* Bordes redondeados */      
+    border-radius: 20px;  
+    /* Sombra para profundidad */       
+    box-shadow: 0 8px 20px rgb(0, 0, 0);  
+    /* espacio de arriba y abajo y derecha e izquierda */
+    padding: 20px;
+    /* para centrar el contenedor */
+    margin: 0 auto; 
+}
