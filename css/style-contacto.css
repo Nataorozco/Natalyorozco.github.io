@@ -1,0 +1,191 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/mar5.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+.navbar{
+    /* color de fondo del encabezado */
+    background-color: #7575753c;
+    /* sombreado del encabezado */
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.727);
+    padding: 15px;
+    /* fijar el menú */
+    position: sticky;
+    /* quitarle el espaciado en la parte superior */
+    top: 0;
+    margin-bottom: 10px;
+    /* para la creación de capas */
+    z-index: 1000;
+}
+
+.navbar ul{
+    /* disposición flexible */
+    display: flex;
+    /* no tenga estilos la lista */
+    list-style-type: none;
+    /* espaciado dentro del contenedor hacia la izquierda */
+    padding-left: 0;
+    /* espacioado que hay despues del borde del contenido */
+    margin: 0;
+    /* Se justifica el contenido de acuerdo al espacio del evento */
+    justify-content: space-evenly;
+}
+
+.navbar ul li{
+    /* espaciado que hay desde la parte exterior y el borde, en donde el primer termino es el espacio de arriba y abajo y el segundo termino es la izquierda y derecha */
+    margin: 20px 10px;
+}
+
+.navbar ul li a{
+    /* sin decoraciones  */
+    text-decoration: none;
+    /* color del texto */
+    color: rgb(255, 255, 255);
+    /* negrilla */
+    font-weight: bold;
+    /* temporizando la transición de cambio de 0.3s */
+    transition: color 0.3s;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.773);
+}
+
+.navbar ul li a:hover{
+    /* cambia el color cuando se pasa el cursor */
+    color: #f36900;
+}
+
+.form-container{
+    /* Hace que el contenedor sea flexible */
+    display: grid;
+    /* Es el espacio que está dentro del borde */
+    padding: 10px;
+    /* Delimitado al ancho máximo */
+    max-width: 900px;
+    /* Es el espacio que está fuera del borde */
+    margin: 40px auto;
+    /* Color de fondo */
+    background-color: #7575753c;
+    /* borde circular */
+    border-radius: 8px;
+    /* sombreado al contenedor */
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.727);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "item1 item2";
+    width:100%;
+    height: 350px;
+}
+
+#mensaje{
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    height: 160px;
+    width: 100%;
+    margin-top: 80px;
+    resize: none;
+    outline: none;
+    border: none;
+    background: hsla(0, 0%, 100%, 0);
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.727);
+}
+
+fieldset{
+    /* Borde circular */
+    border: none;
+    /* Es el espacio que está dentro del borde */
+    padding: 10px;
+    /* Es el espacio que esta afuera del borde entre el fielset con otros elementos en la parte inferior  */
+    margin-bottom: 10px;
+}
+
+form legend{
+    /* Negrilla */
+    font-weight: bold;
+    /* Color de texto */
+    color: #fcfcfc;
+    border-bottom: 2px solid #b69200;
+}
+
+label{
+    /* Disposición de tipo bloque */
+    display: block;
+    /* Es el espacio que esta afuera del borde entre el label con otros elementos solo en en la parte superior */
+    margin-top: 10px;
+    /* Negrilla */
+    font-weight:bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select{
+    /* Ancho */
+    width: 100%;
+    /* le establecimos el padding  */  
+    padding: 12px;
+    /* Margin superior */
+    margin-top: 20px;
+    /* margin inferior */
+    margin-bottom: 15px;
+    /* propiedades del borde */
+    border-bottom: 1px solid #060606;
+    /* Cuadro de texto */
+    box-sizing: border-box;
+    background: transparent;
+    outline: none; 
+    border: none;
+    border-bottom: 1px solid #ffffff9e;
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+input[type="radio"]{
+    /* Margen de la derecha */
+    margin-right: 5px;
+}
+
+input.radio-label{
+    /* Disposición en linea flexible */
+    display: inline-flex;
+    /* Centrar los items */
+    align-items: center;
+    /* Margen de la derecha */
+    margin-right: 5px;
+}
+
+button[type="submit"]{
+    /* Color de fondo */
+    background-color: #b69200;
+    /* Color de texto */
+    color: white;
+    /* Que no tenga borde */
+    border: none;
+    margin: 0 auto;
+    /* Modificaciones en la parte superior y derecha del padding */
+    padding: 12px 25px;
+    /* Centrar el texto */
+    text-align: center;
+    /* El tamaño de letra */
+    font-size: 16px;
+    /* Borde circular */
+    border-radius: 8px;
+    /* Tipo de cursor cuando pasa sobre el botón */
+    cursor: pointer;
+    /* Transición del fondo, demore 0.3s */
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover{
+    /* El color de fondo cuando pase el cursor sobre el botón */
+    background-color: #b67000;
+}
