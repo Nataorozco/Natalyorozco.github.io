@@ -1,274 +1,180 @@
-* {
+body{
+    /*Es el tipo de letra */
+    font-family: Arial, Helvetica, sans-serif;
+    /*color de fondo*/
+    background: radial-gradient(circle, #06202B, black 70%);
+    /*color de texto*/
+    color: #ffffff;
+    /*espacio entre linea y linea*/
+    line-height: 1.6;
+    /*Es el espacio entre el borde y la parte externa*/
     margin: 0;
+    /*distancia que hay en la parte interna del borde*/
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #0a1828 0%, #1e3a5f 100%);
-    color: #333;
+    /*que se comporte como una cuadricula*/
+    display: grid;
+    /*El largo minimo se acomode de forma automática*/
     min-height: 100vh;
+    /* Disposición de las filas */
+    grid-template-rows: auto 1fr auto;
 }
 
-/* Header */
-.header {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.energia h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.energia p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Layout Grid */
-.layout-grid {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 20px;
-    max-width: 1400px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* Sidebar */
-.sidebar {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: fit-content;
-    position: sticky;
-    top: 20px;
-}
-
-.sidebar h2 {
-    color: #1e3a5f;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icono {
-    width: 30px;
-    height: 30px;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar ul li a {
-    display: block;
-    padding: 12px 15px;
-    color: #1e3a5f;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-.sidebar ul li a:hover {
-    background: #2563eb;
-    color: white;
-    transform: translateX(5px);
-}
-
-/* Portfolio/Main Content */
-.portafolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.item {
-    background: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-.item h2 {
-    color: #1e3a5f;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-.item p {
-    color: #666;
+.fondo-2{
+    font-family: Arial, Helvetica, sans-serif;
+    /*color de fondo*/
+    background: url(../img/mar7.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 8px 20px rgba(1, 104, 247, 0.733); 
+    /*color de texto*/
+    color: #ffffff;
+    /*espacio entre linea y linea*/
     line-height: 1.6;
-    margin-bottom: 15px;
+    /*Es el espacio entre el borde y la parte externa*/
+    margin: 70px;
+    /*distancia que hay en la parte interna del borde*/
+    min-height: 100vh;
+    border-radius: 30px;
 }
 
-.item a {
-    display: inline-block;
-    color: #2563eb;
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+b{
+    color: #000000;
+}
+
+.logo a{
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    color: #ffffff;
 }
 
-.item a:hover {
-    color: #1e40af;
-    transform: translateX(5px);
+.portafolio{
+    /* Disposición en cuadricula */
+    display: grid;
+    /* distancia entre los elementos */
+    gap: 30px;
+    /* margin derecha */
+    margin-right: 100px;
+    margin-left: 100px;
+    /* margin arriba */
+    margin-top: 70px;
+    /* comportamiento de las columnas */
+    grid-template-columns: repeat(3, 1fr);
+    /* comportamiento del área */
+    grid-template-areas:
+    "item1 item2 item3"
+    "item1 item2 item3"
+    "item4 item2 item5";
+    /* Comportamiento de las filas */
+    grid-template-rows: auto;
+    /* Centra los ítems dentro de sus celdas */
+    padding-bottom: 20px;
 }
 
-/* Ventajas Card */
-.ventajas {
-    cursor: pointer;
-    text-align: center;
-    padding: 20px;
-    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-    color: white;
+/* bautizo de los hijos */
+.item:nth-child(1){grid-area: item1;}
+.item:nth-child(2){grid-area: item2;}
+.item:nth-child(3){grid-area: item3;}
+
+.item:nth-child(2) {
+    height: 380px;
+    /* color de fondo */
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 58, 91), rgb(0, 0, 0));
+    /* borde circular */
     border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.ventajas:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
-}
-
-.ventajas h2 {
-    color: white;
-    margin: 0;
-}
-
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 40px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-    animation: slideIn 0.3s ease;
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-}
-
-.modal-content h2 {
-    color: #1e3a5f;
+    /* distancia del borde con el contenido de adentro */
+    padding: 5px;
+    /* sombra de la caja */
+    box-shadow: 0 1px 8px rgb(0, 0, 0);
+    /* centra el texto; */
     text-align: center;
+    padding: 45px 30px 40px 30px;
+    animation: ease-in animat 3s;
+}
+
+@keyframes animat {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.item:nth-child(1) {
+    height: 300px;
+    /* color de fondo */
+    background:url(../img/undimotriz3.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    /* borde circular */
+    border-radius: 10px;
+    /* distancia del borde con el contenido de adentro */
+    padding: 5px;
+    /* sombra de la caja */
+    box-shadow: 0 1px 8px rgb(0, 0, 0);
+    /* centra el texto; */
+    animation: ease-in animat 5s;
+}
+
+.item:nth-child(3) {
+    margin-top: 150px;
+    height: 300px;
+    background:url(../img/undimotriz2.jpg);
+    background-position: cover;
+    background-position: center;
+    opacity: 0.7;
+    /* borde circular */
+    border-radius: 10px;
+    /* distancia del borde con el contenido de adentro */
+    padding: 5px;
+    /* sombra de la caja */
+    box-shadow: 0 1px 8px rgb(0, 0, 0);
+    /* centra el texto; */
+    text-align: center;
+    animation: ease-in animat 5s;
+}
+
+.item>i {
+    margin-top: 10px;
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: 50px;
+    text-align: center;
 }
 
-.ventaja {
-    margin-bottom: 25px;
-    padding: 20px;
-    background: #f8fafc;
-    border-left: 4px solid #2563eb;
+.item>h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.item>p {
+    font-weight: 100;
+    color: #ffffff;
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+.item>a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    width: 140px;
+    display: inline-block;
+    background: linear-gradient(to right, rgb(0, 115, 255), rgb(0, 255, 162), rgb(0, 128, 117));
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
     border-radius: 8px;
 }
 
-.ventaja h3 {
-    color: #1e3a5f;
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.ventaja p {
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Footer */
-.footer {
-    background: #1e3a5f;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
-}
-
-.footer p {
-    margin: 0;
-    line-height: 1.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .layout-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        position: static;
-    }
-    
-    .energia h1 {
-        font-size: 2rem;
-    }
-    
-    .portafolio {
-        grid-template-columns: 1fr;
-    }
-    
-    .modal-content {
-        width: 95%;
-        padding: 20px;
-    }
+.item>a:hover {
+    color: #707070;
+    transition: color .5s;
 }
