@@ -19,36 +19,114 @@ body{
     grid-template-rows: auto 1fr auto;
 }
 
-.fondo-2{
-    font-family: Arial, Helvetica, sans-serif;
-    /*color de fondo*/
-    background: url(../img/mar7.jpg);
+.header{
+    /* Color de fondo */
+    /* Ajusta para que cubra toda la pantalla */
+    background-image: url('../img/oceano1.jpg');
+    background-size: cover;      
+    /* Centra la imagen */   
     background-position: center;
-    background-size: cover;
-    box-shadow: 0 8px 20px rgba(1, 104, 247, 0.733); 
-    /*color de texto*/
+    /* no repite la imagen*/           
+    background-repeat: no-repeat;
+    /* Color del texto */
     color: #ffffff;
-    /*espacio entre linea y linea*/
-    line-height: 1.6;
-    /*Es el espacio entre el borde y la parte externa*/
-    margin: 70px;
+    /* centrar el texto */
+    text-align: center;
+    /* que la parte superior no tenga espacio */
+    top: 0;
+    /* que la parte izquierda no tenga espacio */
+    left: 0;
+    /* su ancho sea automático */
+    width: auto;
+    /* que lo trabajo con una sola capa en el eje de la z */
+    z-index: 1;
+    /*distancia debajo del header*/
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.energia {
+    padding: 220px 130px;
+}
+
+.energia p{
+    padding: 5px 10px;
+    background-color: #06202bb5;
+    border-radius: 8px;
+}
+
+.layout-grid{
+    /* la disposición en forma de cuadrícula */
+    display: grid;
+    /* Como se comportara en terminos de columnas la cuadrícula */
+    grid-template-columns: 210px 1fr;
+    /* Es la distancia que hay entre los elementos internos */
+    gap: 5px;
     /*distancia que hay en la parte interna del borde*/
-    min-height: 100vh;
-    border-radius: 30px;
+    padding: 0px;
+    /* modificamos el largo */
+    height: auto;
 }
 
-.logo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    margin-left: 20px;
+.sidebar{
+    /* color de fondo */
+    background: radial-gradient(circle, #06202B, black 70%);
+    /* es la distancia que hay dentro del borde */
+    padding: 5px;
+    /* Sombra de la caja */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    /* Desplazar, dejando estática el menú */
+    position: sticky;
+    margin-top: 10px;
+    /* distancia de la parte superior en cero */
+    top: 0;
+    /* distancia de la parte inferior en cero */
+    bottom: 0;
+    left: 0;
+    /* me toma el 100% de la distancia de la página en la altura */
+    /*el texto o informacion de la caja la va acomodando a lo largo*/
+    height: fit-content;
+    /*se modifica el ancho*/
+    width: 200px;
+    border-radius: 8px;
 }
 
-b{
-    color: #000000;
+.sidebar ul{
+    /* No quiero que lleve viñetas */
+    list-style-type: none;
+    /* Es el padding izquierdo */
+    padding-left: 0;
 }
 
-.logo a{
+.sidebar ul li{
+    /* margen de abajo */
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a{
+    /* Que no tenga el subrayado */
     text-decoration: none;
+    /* Color de texto */
+    color: #ffffff;
+    /* La transición de color demore 0.3s */
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+.sidebar ul li a:hover{
+    /* Color del texto */
+    color: #b3d700;
+    /* Negrilla */
+    font-weight: bold;
+    /* La transición de color demore 0.3s */
+    transition: 0.6s;
+}
+
+.sidebar h2{
+    border-radius: 8px;
+    background: #06202bb5;
+    font-size: 15px;
     color: #ffffff;
 }
 
@@ -56,22 +134,20 @@ b{
     /* Disposición en cuadricula */
     display: grid;
     /* distancia entre los elementos */
-    gap: 30px;
+    gap: 15px;
     /* margin derecha */
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: 20px;
     /* margin arriba */
-    margin-top: 70px;
+    margin-top: 10px;
     /* comportamiento de las columnas */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     /* comportamiento del área */
     grid-template-areas:
-    "item1 item2 item3"
-    "item1 item2 item3"
-    "item4 item2 item5";
+    "item1 item2 item2 item2" 
+    "item1 item3 item4 item4"
+    "item5 item6 item7 item8";
     /* Comportamiento de las filas */
     grid-template-rows: auto;
-    /* Centra los ítems dentro de sus celdas */
     padding-bottom: 20px;
 }
 
@@ -79,102 +155,193 @@ b{
 .item:nth-child(1){grid-area: item1;}
 .item:nth-child(2){grid-area: item2;}
 .item:nth-child(3){grid-area: item3;}
+.item:nth-child(4){grid-area: item4;}
+.item:nth-child(5){grid-area: item5;}
+.item:nth-child(6){grid-area: item6;}
+.item:nth-child(7){grid-area: item7;}
+.item:nth-child(8){grid-area: item8;}
 
-.item:nth-child(2) {
-    height: 380px;
+.item{
     /* color de fondo */
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 58, 91), rgb(0, 0, 0));
+    background-color: #7373731a;
     /* borde circular */
-    border-radius: 10px;
+    border-radius: 8px;
     /* distancia del borde con el contenido de adentro */
     padding: 5px;
     /* sombra de la caja */
-    box-shadow: 0 1px 8px rgb(0, 0, 0);
+    box-shadow: 0 1px 3px rgba(254, 254, 254, 0.544);
     /* centra el texto; */
     text-align: center;
-    padding: 45px 30px 40px 30px;
-    animation: ease-in animat 3s;
 }
 
-@keyframes animat {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.item:nth-child(1) {
-    height: 300px;
-    /* color de fondo */
-    background:url(../img/undimotriz3.jpg);
-    background-size: cover;
+.item:nth-child(1){
+    padding-top: 50px;
+    background-image: url(../img/oceano2.jpg);
+    background-size: cover;      
+    /* Centra la imagen */   
     background-position: center;
-    opacity: 0.7;
-    /* borde circular */
-    border-radius: 10px;
-    /* distancia del borde con el contenido de adentro */
-    padding: 5px;
-    /* sombra de la caja */
-    box-shadow: 0 1px 8px rgb(0, 0, 0);
-    /* centra el texto; */
-    animation: ease-in animat 5s;
+    /* no repite la imagen*/           
+    background-repeat: no-repeat;
+}
+
+.item:nth-child(1) h2{
+    padding: 60px;
+}
+
+.item:nth-child(2) {
+    background: #b3d700;
+    color: #06202B;
 }
 
 .item:nth-child(3) {
-    margin-top: 150px;
-    height: 300px;
-    background:url(../img/undimotriz2.jpg);
-    background-position: cover;
+    background-image: url(../img/oceano3.jpg);
+    background-size: cover;      
+    /* Centra la imagen */   
     background-position: center;
-    opacity: 0.7;
+    /* no repite la imagen*/           
+    background-repeat: no-repeat;
+    padding:0px 70px 0 70px;
+}
+
+.ventajas{
+    border-radius: 8px;
+    border: 2px solid #b3d700;
+    background: #06202bb5;
+    margin-top: 90px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.item:nth-child(4) {
+    background-image: url(../img/undimotriz.jpg);
+    background-size: cover;      
+    /* Centra la imagen */   
+    background-position: center;
+    /* no repite la imagen*/           
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+.item:nth-child(5) h2,
+.item:nth-child(6) h2,
+.item:nth-child(7) h2,
+.item:nth-child(8) h2{
+    border-radius: 8px;
+    border: 2px solid #b3d700;
+    background: #06202bb5;
+    font-size: 20px;
+}
+
+.footer{
+    /* color de fondo */
+    background: radial-gradient(circle, #06202B, black 70%);
+    /*color de texto */
+    color: white;
+    /* texto centrado */
+    text-align: center;
+    /* espacio dentro de la caja */
+    padding: 10px;
+    /* ancho del texto */
+    width:100%;
+    /* que no tenga espacio a la izquierda */
+    left: 0; 
+}
+
+.icono{
+    /* Representa una medida relativa que equivale a 1.8 veces el tamaño de fuente del elemento padre */
+    width: 1.8em;
+    /* Alineación vertical a la mitad */
+    vertical-align: middle;
+}
+
+.modal{
+    /* "desaparece"  */
+    display: none;
+    /* posición fixed */
+    position: fixed;
+    /* asignado a la segunda capa */
+    z-index: 2;
+    /* nada a la izquierda */
+    left: 0;
+    /* nada arriba */
+    top: 0;
+    /* largo total del contenedor */
+    width: 100%;
+    /* largo del contenedor */
+    height: 100%;
+    /* se utiliza para controlar como se maneja los contenidos que sobre pasan los limites de un elemento */
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    /* color de fondo */
+    background-color: rgb(0, 0, 0);
+    /* margen fuera del borde */
+    margin: auto;
+    /* margen dentro del borde */
+    padding: 30px;
     /* borde circular */
     border-radius: 10px;
-    /* distancia del borde con el contenido de adentro */
-    padding: 5px;
-    /* sombra de la caja */
-    box-shadow: 0 1px 8px rgb(0, 0, 0);
-    /* centra el texto; */
-    text-align: center;
-    animation: ease-in animat 5s;
+    /* ancho */
+    width: 80%;
+    /* ancho maximo */
+    max-width: 900px;
+    /* sombreado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.991);
+    /* Se utiliza para posicionar un elemento en relación con su posición normal en el documento */
+    position: relative;
 }
 
-.item>i {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 50px;
-    text-align: center;
-}
-
-.item>h3 {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.item>p {
-    font-weight: 100;
-    color: #ffffff;
-    margin-top: 5px;
-    padding-bottom: 20px;
-}
-
-.item>a {
-    color: #ffffff;
+.close{
+    /* color del texto */
+    color: #aaa;
+    /* posición absoluta, donde busca el contenedor relativo mas cercano para posicionarse */
+    position: absolute;
+    /* la parte de arriba */
+    top: 10px;
+    /* la parte de la derecha */
+    right: 20px;
+    /* tamaño de la letra */
+    font-size: 28px;
+    /* negrilla */
     font-weight: bold;
-    text-decoration: none;
-    width: 140px;
-    display: inline-block;
-    background: linear-gradient(to right, rgb(0, 115, 255), rgb(0, 255, 162), rgb(0, 128, 117));
-    text-align: center;
-    padding: 10px 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    border-radius: 8px;
+    /* modificamos lo visual */
+    cursor: pointer;
 }
 
-.item>a:hover {
-    color: #707070;
-    transition: color .5s;
+.close:hover, .close:focus{
+    color: black;
+}
+
+.modal-content h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.ventaja {
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.ventaja h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #00ccff;
+}
+
+.ventaja p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #ddd;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: #b3d700;
 }
